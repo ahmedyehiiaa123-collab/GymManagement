@@ -14,7 +14,7 @@ namespace GymManagement.DAL.Data.Models
         public string Phone { get; set; } = default!;
         public DateOnly DateofBirth { get; set; }
 
-        public Address Address { get; set; }  
+        public Address? Address { get; set; }   
         public Gender Gender { get; set; }
     }
 
@@ -23,7 +23,7 @@ namespace GymManagement.DAL.Data.Models
 
         public string City { get; set; } = default!;
         public string Street { get; set; } = default!;
-        public int BuildingNumber { get; set; };
+        public int BuildingNumber { get; set; }
 
 
 

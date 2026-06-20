@@ -8,7 +8,7 @@ namespace GymManagement.Configuration
     {
         public void Configure(EntityTypeBuilder<Plan> builder)
         {
-            builder.Property(x => x.Name)
+            builder.Property(x => x.PlanName)
                 .HasColumnType("varchar")
                 .HasMaxLength(50);
             builder.Property(x => x.Price)
@@ -17,7 +17,7 @@ namespace GymManagement.Configuration
                 .HasColumnType("varchar")
               .HasMaxLength(200);
 
-            builder.Property(x => x.CreatedAt)
+            builder.Property(x => x.CreateAt)
                 .HasDefaultValueSql("GETDATE()");
 
             builder.ToTable(tb =>

@@ -9,7 +9,7 @@ namespace GymManagement.DAL.Data.Models
         public decimal Height { get; set; }
         public decimal Weight { get; set; }
         public string? Note { get; set; }
-        public string BloodType { get; set; }
+        public string ?BloodType { get; set; }
         //LastUpdated = UpdatedAt of Base
 
         #region RelationShips

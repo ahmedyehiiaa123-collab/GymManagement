@@ -5,8 +5,10 @@ namespace GymManagement.BLL.Services.Classes
 {
     public interface IMemberServices
     {
-        public  Task<MemberViewModel> GetAllAsync(CancellationToken ct =  default);
+        Task<MemberViewModel> GetAllAsync(CancellationToken ct =  default);
         Task<bool> CreateMemberAsync(CreateMemberView Createmember , CancellationToken ct = default);
+        Task<MemberViewModel>GetMemberDetailsByIdAsync(int MemberId , CancellationToken ct = default);
+        Task<HealthRecordViewModel?> GetMemberHealthRecordDetailsAsync(int MemberId, CancellationToken ct = default);
 
     }
 }

@@ -15,9 +15,10 @@ namespace GymManagement.DAL.Data.Controllers
             //explicit defult
 
             builder.HasKey(x => new { x.SessionId, x.MemberId });
-            builder.Property(x=>x.CreateAt)
+          
+            builder.Property(x => x.CreateAt)
                 .HasColumnName("BookingDate")
-                .HasDefaultValueSql("GETDATE()")
+                .HasDefaultValueSql("GETDATE()");
 
 
         }

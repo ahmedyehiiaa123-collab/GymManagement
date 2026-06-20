@@ -1,5 +1,4 @@
-﻿using GymManagement.Configuration;
-using GymManagement.DAL.Controllers;
+﻿using GymManagement.DAL.Controllers;
 using GymManagement.DAL.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;

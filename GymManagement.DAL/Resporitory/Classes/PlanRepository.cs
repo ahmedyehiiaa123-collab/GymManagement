@@ -34,6 +34,11 @@ namespace GymManagement.DAL.Resporitory.Classes
             return await query.ToListAsync();
         }
 
+        public Task<IEnumerable<Plan>> GetAllasync(bool tracking = false, CancellationToken ct = default)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<Plan?> GetByIdAsync(int id, CancellationToken ct = default)
         {
             return await dbcontext.plans.FindAsync(id, ct);

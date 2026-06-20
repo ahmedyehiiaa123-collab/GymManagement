@@ -20,7 +20,7 @@ namespace GymManagement.DAL.Data.Models
         public Category Category { get; set; } = default!;
         public int CategoryId { get; set; }
 
-        public ICollection<Booking> Bookings { get; set; }
+        public ICollection<Booking> Bookings { get; set; } = new HashSet<Booking>();
 
         //bookingDate => base Entitiy Created At
         public bool IsAttended { get; set; }

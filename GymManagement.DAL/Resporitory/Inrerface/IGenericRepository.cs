@@ -1,6 +1,7 @@
 ﻿using GymManagement.DAL.Data.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace GymManagement.DAL.Resporitory.Inrerface
@@ -13,7 +14,9 @@ namespace GymManagement.DAL.Resporitory.Inrerface
         Task<int> AddAsync(TEntity entity, CancellationToken ct = default);
         Task<int> UpdateAsync(TEntity entity, CancellationToken ct = default);
         Task<int> DeleteAsync(TEntity entity, CancellationToken ct = default);
-
-
+        Task<TEntity?> FirstOrDefaultAsync(
+            Expression<Func<TEntity, bool>> Predicate,
+            CancellationToken ct = default,
+            bool tracking = false);
     }
 }
